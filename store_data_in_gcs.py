@@ -60,8 +60,12 @@ def fetch_usda_data(api_key: str, dataset_key: str) -> list:
     page = 1
 
     while True:
-        params = {**cfg["params"], "pageNumber": page, "api_key": api_key}
-        resp = requests.post(f"{USDA_API_BASE}{cfg['api_path']}", json=params)
+        params = {**cfg["params"], "pageNumber": page}
+        resp = requests.post(
+            f"{USDA_API_BASE}{cfg['api_path']}",
+            params={"api_key": api_key},
+            json=params
+        )
         resp.raise_for_status()
         foods = resp.json()
         if not foods:
