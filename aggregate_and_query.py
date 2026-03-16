@@ -400,7 +400,7 @@ if __name__ == "__main__":
     print("=" * 60)
     print("PHASE 1: Flatten + Label Foods (DRY RUN)")
     print("=" * 60)
-    labeled_foods = flatten_and_label_all_foods(db, dry_run=False)
+    labeled_foods = flatten_and_label_all_foods(db, dry_run=True)
 
     print("\n" + "=" * 60)
     print("PHASE 2: Aggregations")
