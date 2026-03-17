@@ -70,6 +70,13 @@ Two models were trained on 8 nutritional features: calories, protein, total fat,
 
 The GBT model achieves slightly higher accuracy but takes about 18 times longer to train. The most predictive features were total sugars and calories for both models.
 
+## Known Limitations
+
+- The `foodCategory` field was not populated in the API response for this dataset, so all foods are grouped under "Unknown" in category-based queries. This does not affect the ML pipeline since food category is not used as a feature.
+- Because the health labels were derived from the same 8 nutritional features used to train the models, the high accuracy (~96-97%) reflects the models learning to replicate the scoring rules rather than generalizing to independent health labels. In a real-world setting, labels from nutritionists or health studies would present a harder and more meaningful classification problem.
+- Record counts differ slightly from the original project (~5,432 survey records vs ~10,864) likely due to USDA database updates between runs.
+
+
 ## Setup
 
 ```bash
