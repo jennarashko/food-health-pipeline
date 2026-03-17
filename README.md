@@ -1,8 +1,18 @@
 # Food Health Classification Pipeline
 
-Automated data pipeline that ingests USDA food data, labels foods as healthy or unhealthy using nutritional thresholds, and trains a Random Forest classifier to predict food health labels.
+## About Me
+My name is Jenna Rashkovsky. I am a Master's student in Data Science at the University of San Francisco. This project was originally completed as a group project in MSDS 697: Distributed Data Systems. I rebuilt it independently from scratch to strengthen my understanding of each component of the pipeline.
 
-This project was independently rebuilt from a group project completed in MSDS 697: Distributed Data Systems, Spring 2026. The original project was completed collaboratively with a team. This version was rebuilt to deepen my understanding of each component.
+## Project Description
+This repository implements a distributed data pipeline that ingests nutritional data from the USDA FoodData Central API, labels foods as healthy or unhealthy using a rule-based scoring system, and trains ensemble machine learning models to predict those labels at scale.
+
+## Importance
+As nutritional data becomes increasingly available, there is growing interest in automating food health classification. This project explores how distributed tools like MongoDB, Apache Spark, and Apache Airflow can be combined to process and analyze large-scale nutritional datasets efficiently.
+
+## Outcome
+1. A Random Forest Classifier achieved 95.7% accuracy and 98.96% AUC, training in under 4 seconds.
+2. A Gradient Boosted Trees model achieved 96.46% accuracy and 99.34% AUC, with a training time of 66 seconds. This is about 18 times slower than Random Forest for a marginal accuracy gain.
+3. Total sugars and calories were the most predictive features for both models.
 
 ## Architecture
 
