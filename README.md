@@ -1,4 +1,4 @@
-# Food Health Classification pipeline
+# Food Health Classification Pipeline
 
 Automated data pipeline that ingests USDA food data, labels foods as healthy or unhealthy using nutritional thresholds, and trains a Random Forest classifier to predict food health labels.
 
